@@ -1,11 +1,10 @@
 I recommend reading this file on [GitHub](https://github.com/RoJoJoey/GhunterGhostHunter)
 # Ghunter Ghost Hunter
 
-Ghunter Ghost Hunter is a hide-and-seek style game created by Joey Einerhand and Bas Körver.
+Ghunter Ghost Hunter is a hide-and-seek style game made in the Unity engine created by Joey Einerhand and Bas Körver.
 
 In Ghunter Ghost Hunter, a seeker (Ghunter) hunts down one or more hiders (Ghosts), who can hide in objects. The g
 
-GGH was made in The Unity Engine.
 GGH uses Domoticz - typically used as Internet of Things software - to simulate back-end server-style information relay. The clients connect and send data to Domoticz using HTTPrequests.
 
 
