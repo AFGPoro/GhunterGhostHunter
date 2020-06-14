@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1772492246}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: NearHidableObjectCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 3559305901554584942}
   - component: {fileID: 3559305901554584936}
   - component: {fileID: 3559305901554584943}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,6 +95,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -119,9 +120,9 @@ GameObject:
   - component: {fileID: 3559305901643087377}
   - component: {fileID: 3559305901643087379}
   - component: {fileID: 2060322634}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Ghost
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,6 +184,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 512
+  CanMove: 1
 --- !u!114 &2060322634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,10 +197,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca48b52867d32bf4487b05e9d9cd0af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HideableObjectsMask:
+  hidableObjectsMask:
     serializedVersion: 2
     m_Bits: 1024
-  HidableObjectCheck: {fileID: 1772492246}
+  hidableObjectCheckerTransform: {fileID: 1772492246}
+  ghostTransform: {fileID: 3559305901643087378}
+  ghostCamera: {fileID: 3559305902207140724}
+  ghostIsHidden: 0
+  ghostMoveScript: {fileID: 3559305901643087379}
 --- !u!1 &3559305902157678386
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +214,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3559305902157678387}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,8 +247,8 @@ GameObject:
   - component: {fileID: 3559305902207140724}
   - component: {fileID: 3559305902207140715}
   - component: {fileID: 3559305902207140726}
-  m_Layer: 0
-  m_Name: Main Camera
+  m_Layer: 11
+  m_Name: GhostCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -274,9 +280,10 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2

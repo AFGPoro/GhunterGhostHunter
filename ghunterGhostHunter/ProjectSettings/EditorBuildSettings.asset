@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GhostPlayerScene.unity
     guid: 7f14db763e8b6a240a8e230869bf507a
+  - enabled: 1
+    path: Assets/Scenes/GhunterPlayerScene.unity
+    guid: f1a6c444a74aa3b4bbbd32f27f37151e
   m_configObjects: {}
